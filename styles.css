@@ -431,348 +431,6 @@ a:hover {
     font-size: 0.9rem;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    body {
-        overflow: visible;
-    }
-    
-    .layout-container {
-        flex-direction: column;
-        height: auto;
-    }
-    
-    .sidebar {
-        width: 100%;
-        position: relative;
-        height: auto;
-        padding: 30px 20px;
-    }
-    
-    .main-content {
-        margin-left: 0;
-        padding: 20px;
-        height: auto;
-        overflow-y: visible;
-    }
-    
-    .sidebar h1 {
-        font-size: 1.8rem;
-    }
-    
-    .chinese-name {
-        font-size: 1.1rem;
-    }
-
-    .ustc-logo {
-        display: none;
-    }
-
-    .profile-img {
-        width: 120px;
-        height: 120px;
-    }
-
-    .experience-logo {
-        display: none;
-    }
-
-    .experience-row {
-        flex-direction: column;
-    }
-
-    .experience-content {
-        width: 100%;
-    }
-}
-
-@media (max-width: 900px) {
-    .experience-logo {
-        display: none;
-    }
-    .education-logo {
-        display: none;
-    }
-}
-
-/* Sections */
-.section {
-    margin: 35px 0;
-}
-
-.section h2 {
-    font-family: 'Optima', 'Georgia', serif;
-    font-size: 1.4rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-    color: #000;
-}
-
-/* News List */
-.news-list {
-    list-style: none;
-    line-height: 1.8;
-}
-
-.news-list li {
-    margin-bottom: 8px;
-    color: #333;
-}
-
-.date {
-    color: #666;
-    font-weight: 700;
-}
-
-/* Publications */
-/* Publications Section */
-.publication-note {
-    margin-bottom: 0.5rem;
-    color: #666;
-    font-size: 0.95rem;
-}
-
-.scholar-link {
-    color: #4285f4;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.scholar-link:hover {
-    text-decoration: underline;
-}
-
-.scholar-link i {
-    margin-right: 0.3rem;
-}
-
-.publication-notation {
-    margin-bottom: 1.5rem;
-    color: #888;
-    font-size: 0.9rem;
-    font-style: italic;
-}
-
-.publication-item {
-    margin-bottom: 30px;
-    padding-bottom: 25px;
-    border-bottom: 1px solid #f0f0f0;
-}
-
-.publication-item:last-child {
-    border-bottom: none;
-}
-
-.paper-title {
-    font-family: 'Optima', 'Georgia', serif;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #000;
-    margin-bottom: 8px;
-    line-height: 1.4;
-}
-
-.authors {
-    margin-bottom: 5px;
-    color: #555;
-    line-height: 1.5;
-}
-
-.venue {
-    margin-bottom: 12px;
-    color: #666;
-    font-style: italic;
-}
-
-.paper-links {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.paper-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    color: #0066cc;
-    text-decoration: none;
-    font-size: 0.9rem;
-    padding: 4px 8px;
-    border-radius: 4px;
-    transition: background-color 0.2s ease;
-}
-
-.paper-link:hover {
-    background-color: #f0f8ff;
-    text-decoration: none;
-}
-
-.paper-link i {
-    font-size: 0.8rem;
-}
-
-/* Research Interests */
-.research-list {
-    list-style: none;
-    line-height: 1.8;
-}
-
-.research-list li {
-    margin-bottom: 12px;
-    padding-left: 20px;
-    position: relative;
-}
-
-.research-list li:before {
-    content: "•";
-    color: #0066cc;
-    font-weight: bold;
-    position: absolute;
-    left: 0;
-}
-
-/* Skills */
-.skills-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
-    margin-top: 20px;
-}
-
-.skill-category h3 {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 12px;
-    color: #000;
-}
-
-.skills-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-.skill-tag {
-    background-color: #f0f8ff;
-    color: #0066cc;
-    padding: 4px 12px;
-    border-radius: 15px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    border: 1px solid #e0f0ff;
-}
-
-/* Typography */
-p {
-    margin-bottom: 10px;
-    text-align: justify;
-    line-height: 1.6;
-}
-
-strong {
-    font-weight: 600;
-}
-
-a {
-    color: #0066cc;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Footer */
-.footer {
-    margin-top: 80px;
-    padding-top: 20px;
-    border-top: 1px solid #eee;
-    text-align: center;
-    color: #666;
-    font-size: 0.9rem;
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    body {
-        padding: 20px 15px;
-    }
-    
-    .header h1 {
-        font-size: 2rem;
-    }
-    
-    .chinese-name {
-        display: block;
-        margin-left: 0;
-        margin-top: 8px;
-        font-size: 1.4rem;
-    }
-    
-    .header-content {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
-    
-    .intro-content-with-image {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
-    
-    .profile-img {
-        width: 120px;
-        height: 120px;
-        margin: 0 auto;
-    }
-    
-    .header-info {
-        text-align: left;
-    }
-    
-    .intro-content {
-        text-align: left;
-    }
-    
-    .contact-links {
-        gap: 6px;
-    }
-}
-
-@media (max-width: 480px) {
-    .header h1 {
-        font-size: 1.7rem;
-    }
-    
-    .chinese-name {
-        font-size: 1.2rem;
-    }
-    
-    .intro-content h2 {
-        font-size: 1.3rem;
-    }
-    
-    .section h2 {
-        font-size: 1.2rem;
-    }
-    
-    .profile-img {
-        width: 100px;
-        height: 100px;
-    }
-    
-    .skills-container {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    .paper-links {
-        flex-wrap: wrap;
-        gap: 8px;
-    }
-}
-
 /* Education */
 .education-list {
     display: flex;
@@ -843,4 +501,83 @@ a:hover {
 .education-time .time {
     color: #666;
     font-weight: 700;
+}
+
+/* ==================== Responsive Design ==================== */
+
+/* 900px and below - hide logos */
+@media (max-width: 900px) {
+    .experience-logo {
+        display: none;
+    }
+    .education-logo {
+        display: none;
+    }
+}
+
+/* 768px and below - mobile layout */
+@media (max-width: 768px) {
+    body {
+        overflow: visible;
+    }
+    
+    .layout-container {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .sidebar {
+        width: 100%;
+        position: relative;
+        height: auto;
+        padding: 30px 20px;
+    }
+    
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+        height: auto;
+        overflow-y: visible;
+    }
+    
+    .sidebar h1 {
+        font-size: 1.8rem;
+    }
+    
+    .chinese-name {
+        font-size: 1.1rem;
+    }
+
+    .ustc-logo {
+        display: none;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .experience-logo {
+        display: none;
+    }
+
+    .experience-row {
+        flex-direction: column;
+    }
+
+    .experience-content {
+        width: 100%;
+    }
+
+    .education-logo {
+        display: none;
+    }
+
+    .education-row {
+        flex-direction: column;
+    }
+
+    .education-content {
+        width: 100%;
+    }
 }
