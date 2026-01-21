@@ -24,7 +24,7 @@ body {
 
 /* Left */
 .sidebar {
-    width: 350px;
+    width: clamp(300px, 22vw, 400px);
     background: #f8f9fa;
     border-right: 1px solid #e9ecef;
     padding: 40px 30px;
@@ -75,6 +75,17 @@ body {
     margin-bottom: 20px;
     font-weight: 400;
     display: block;
+}
+
+.ustc-logo {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.ustc-logo img {
+    width: 100px;
+    height: auto;
+    border-radius: 6px;
 }
 
 .affiliation {
@@ -133,7 +144,7 @@ body {
 /* Right */
 .main-content {
     flex: 1;
-    margin-left: 350px;
+    margin-left: clamp(300px, 22vw, 400px);
     padding: 40px 50px;
     overflow-y: auto;
     height: 100vh;
@@ -159,7 +170,7 @@ body {
 
 .intro-content p {
     margin-bottom: 12px;
-    text-align: justify;
+    text-align: left;
     line-height: 1.6;
 }
 
@@ -261,6 +272,7 @@ body {
     margin-bottom: 12px;
     color: #666;
     font-style: italic;
+    text-align: left;
 }
 
 .paper-links {
@@ -288,6 +300,85 @@ body {
 
 .paper-link i {
     font-size: 0.8rem;
+}
+
+/* Experience Section - Research and Internship */
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.experience-item {
+    padding-left: 20px;
+    position: relative;
+}
+
+.experience-item:before {
+    content: "●";
+    color: #0066cc;
+    font-size: 1em;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+}
+
+.experience-title {
+    font-family: 'Optima', 'Georgia', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 10px;
+    z-index: 2;
+    position: relative;
+}
+
+.experience-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.experience-logo {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 1;
+}
+
+.experience-logo img {
+    max-width: 250%;
+    max-height: 250%;
+    object-fit: contain;
+}
+
+.experience-content {
+    flex: 1;
+    z-index: 2;
+}
+
+.experience-time {
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+
+.experience-time .time {
+    color: #666;
+    font-weight: 700;
+}
+
+.experience-description {
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.5;
+    margin-bottom: 0;
 }
 
 /* Research Interests */
@@ -341,17 +432,6 @@ a:hover {
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
-    .sidebar {
-        width: 300px;
-    }
-    
-    .main-content {
-        margin-left: 300px;
-        padding: 30px 40px;
-    }
-}
-
 @media (max-width: 768px) {
     body {
         overflow: visible;
@@ -383,10 +463,35 @@ a:hover {
     .chinese-name {
         font-size: 1.1rem;
     }
-    
+
+    .ustc-logo {
+        display: none;
+    }
+
     .profile-img {
         width: 120px;
         height: 120px;
+    }
+
+    .experience-logo {
+        display: none;
+    }
+
+    .experience-row {
+        flex-direction: column;
+    }
+
+    .experience-content {
+        width: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+    .experience-logo {
+        display: none;
+    }
+    .education-logo {
+        display: none;
     }
 }
 
@@ -663,29 +768,79 @@ a:hover {
     }
     
     .paper-links {
-        flex-direction: column;
+        flex-wrap: wrap;
         gap: 8px;
-        align-items: flex-start;
     }
 }
 
 /* Education */
+.education-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
 .education-item {
-    margin-bottom: 20px;
-}
-
-.education-item p:last-child {
-    margin-left: 20px;
+    padding-left: 20px;
     position: relative;
-    color: #555;
 }
 
-.education-item p:last-child:before {
+.education-item:before {
     content: "●";
     color: #0066cc;
-    font-size: 1.1em;
+    font-size: 1em;
     position: absolute;
-    left: -20px;
+    left: 0;
     top: 0;
     font-weight: bold;
+}
+
+.education-title {
+    font-family: 'Optima', 'Georgia', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 10px;
+    z-index: 2;
+    position: relative;
+}
+
+.education-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.education-logo {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 1;
+}
+
+.education-logo img {
+    max-width: 250%;
+    max-height: 250%;
+    object-fit: contain;
+}
+
+.education-content {
+    flex: 1;
+    z-index: 2;
+}
+
+.education-time {
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+
+.education-time .time {
+    color: #666;
+    font-weight: 700;
 }
