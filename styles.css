@@ -215,6 +215,106 @@ body {
     font-weight: 500;
 }
 
+/* Open Source Projects */
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.project-item {
+    padding-left: 0;
+    position: relative;
+}
+
+.project-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(180px, 260px);
+    align-items: center;
+    gap: 28px;
+}
+
+.project-content {
+    min-width: 0;
+}
+
+.project-title {
+    font-family: 'Optima', 'Georgia', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.project-title-separator {
+    color: #666;
+    font-weight: 400;
+}
+
+.project-tagline-inline {
+    color: #666;
+    font-size: 0.95rem;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.project-tagline {
+    color: #666;
+    font-size: 0.95rem;
+    font-style: italic;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.project-description {
+    color: #444;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.project-logo {
+    min-height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-logo img {
+    width: min(100%, 250px);
+    height: auto;
+    object-fit: contain;
+}
+
+.project-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.project-link:hover {
+    background-color: #f0f8ff;
+    text-decoration: none;
+}
+
+.project-link i {
+    font-size: 0.8rem;
+}
+
 /* Publications */
 .publication-note {
     margin-bottom: 0.5rem;
@@ -251,6 +351,34 @@ body {
 
 .publication-item:last-child {
     border-bottom: none;
+}
+
+.publication-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 125px;
+    align-items: start;
+    gap: 15px;
+}
+
+.publication-content {
+    min-width: 0;
+}
+
+.publication-image {
+    justify-self: end;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.publication-image img {
+    max-width: 250%;
+    max-height: 250%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
 }
 
 .paper-title {
@@ -513,6 +641,20 @@ a:hover {
     .education-logo {
         display: none;
     }
+    .project-logo {
+        display: none;
+    }
+    .publication-image {
+        display: none;
+    }
+
+    .project-row {
+        grid-template-columns: 1fr;
+    }
+
+    .publication-row {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* 768px and below - mobile layout */
@@ -555,6 +697,30 @@ a:hover {
     .profile-img {
         width: 120px;
         height: 120px;
+    }
+
+    .project-row {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .project-logo {
+        justify-content: flex-start;
+        min-height: auto;
+    }
+
+    .project-logo img {
+        width: min(100%, 220px);
+    }
+
+    .publication-row {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .publication-image {
+        justify-self: start;
+        justify-content: flex-start;
     }
 
     .experience-logo {
