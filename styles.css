@@ -291,6 +291,15 @@ body {
     object-fit: contain;
 }
 
+.project-logo--outlined img {
+    width: min(100%, 200px);
+    filter:
+        drop-shadow(1px 0 0 #000)
+        drop-shadow(-1px 0 0 #000)
+        drop-shadow(0 1px 0 #000)
+        drop-shadow(0 -1px 0 #000);
+}
+
 .project-links {
     display: flex;
     gap: 15px;
